@@ -5312,7 +5312,7 @@ else:
 			url = url + "/"
 		m = re.search('http\://([^/]*)/?.*', url)
 	        host = m.group(1)
-		for i in range(100000):
+		for i in range(999999):
 			t = HTTPThread()
 			t.start()
 		t = HTTPThread()
